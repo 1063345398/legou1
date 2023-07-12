@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.box {
+    width: 550px;
+    height: 750px;
+    margin: 0 auto;
+    /* background-color: #f00; */
+    padding-top: 0.1px;
+}
+
+.box .title {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-weight: normal;
+    margin-top: 20px;
+}
+
+.box .tip {
+    width: 100%;
+    height: 30px;
+    color: #ccc;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 10px;
+}
+
+.kongtiao {
+    width: 90%;
+    height: 150px;
+    background-color: #fff;
+    border: 1px solid #D0D0D0;
+    border-radius: 10px 10px 20px 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+    box-shadow: 5px 5px 5px #d0d0d0;
+    position: relative;
+}
+
+.biao {
+    width: 10%;
+    height: 70px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.biao img {
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    text-align: center;
+    width: 100%;
+    height: 10px;
+    font-size: 12px;
+    margin-top: 20px;
+    color: pink;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin-top: 20px;
+}
+
+.line-l {
+    width: 5px;
+    height: 60px;
+    background-color: #ccc;
+    transform: rotate(30deg);
+    position: absolute;
+    top: 20px;
+    left: 180px;
+}
+
+.line-m {
+    width: 5px;
+    height: 60px;
+    background-color: #ccc;
+    transform: rotate(0deg);
+    position: absolute;
+    top: 25px;
+    left: 280px;
+}
+
+.line-r {
+    width: 5px;
+    height: 60px;
+    background-color: #ccc;
+    transform-origin: top;
+    transform: rotate(-30deg);
+    position: absolute;
+    top: 20px;
+    left: 370px;
+}
+
+.feng {
+    width: 100%;
+    height: 100px;
+    /* background-color: #f00; */
+    margin-top: 20px;
+    position: relative;
+    opacity: 0;
+}
+
+.yaokong {
+    width: 120px;
+    height: 45px;
+    border: 1px solid #3F51C7;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 14px;
+    color: #3F51C7;
+}
+
+.kongzhi {
+    width: 100%;
+    height: 100px;
+    margin-top: 70px;
+    line-height: 100px;
+    position: relative;
+}
+
+.di {
+    display: none;
+}
+
+.cold,
+.hot,
+.on {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 55px;
+    margin-right: 20px;
+    top: 50%;
+    margin-top: -25.5px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.cold {
+    background-color: #406BE7;
+    position: absolute;
+    left: 30%;
+}
+
+.on {
+    background-color: #6DDB6D;
+    position: absolute;
+    left: 45%;
+}
+
+.on img {
+    width: 40%;
+    height: 40%;
+    margin-top: 15px;
+}
+
+.hot {
+    background-color: #E5AC61;
+    position: absolute;
+    left: 60%;
+}
+
+.top,
+.bottom {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #fff;
+    background-color: #E0E0E0;
+    text-align: center;
+    line-height: 55px;
+    margin-top: 20px;
+    margin-left: 250px;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.top img {
+    width: 30%;
+    height: 30%;
+}
+
+.bottom img {
+    width: 30%;
+    height: 30%;
+}
+
+.foot {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    color: #74685D;
+    line-height: 25px;
+}
+
+.open {
+    display: none;
+}
+
+.xianshi {
+    width: 80px;
+    height: 60px;
+    /* background-color: #f00; */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding-left: 20px;
+    opacity: 0;
+}
+
+.xianshi .moshi {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    color: blue;
+}
+
+.xianshi .dushu {
+    color: #ccc;
+    display: inline-block;
+}
+
+.xianshi span {
+    color: #ccc;
+}
+
+@media screen and (max-width: 1200px) {
+    .box {
+        width: 100%;
+        height: 650px;
+    }
+    .box .title {
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 10px;
+        font-size: 25px;
+    }
+    .box .tip {
+        margin-top: 5px;
+    }
+    .kongtiao {
+        width: 90%;
+        height: 110px;
+        border-radius: 5px 5px 10px 10px;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    .biao {
+        width: 10%;
+        height: 50px;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+    .logo {
+        margin-top: 10px;
+    }
+    .line-l {
+        width: 5px;
+        height: 40px;
+        background-color: #ccc;
+        transform: rotate(30deg);
+        position: absolute;
+        top: 22px;
+        left: 30%;
+    }
+    .line-m {
+        width: 5px;
+        height: 40px;
+        background-color: #ccc;
+        transform: rotate(0deg);
+        position: absolute;
+        top: 25px;
+        left: 50%;
+    }
+    .line-r {
+        width: 5px;
+        height: 40px;
+        background-color: #ccc;
+        transform-origin: top;
+        transform: rotate(-30deg);
+        position: absolute;
+        top: 22px;
+        left: 70%;
+    }
+    .feng {
+        width: 100%;
+        height: 70px;
+        /* background-color: #f00; */
+        margin-top: 0px;
+        position: relative;
+    }
+    .yaokong {
+        width: 120px;
+        height: 45px;
+        border: 1px solid #3F51C7;
+        border-radius: 5px;
+        position: absolute;
+        left: 50%;
+        margin-left: -60px;
+        margin-top: 10px;
+        text-align: center;
+        line-height: 45px;
+        font-size: 14px;
+        color: #3F51C7;
+    }
+    .kongzhi {
+        margin-top: 50px;
+    }
+    .cold {
+        background-color: #406BE7;
+        position: absolute;
+        left: 25%;
+    }
+    .on {
+        background-color: #6DDB6D;
+        position: absolute;
+        left: 45%;
+    }
+    .on img {
+        width: 40%;
+        height: 40%;
+        margin-top: 15px;
+    }
+    .hot {
+        background-color: #E5AC61;
+        position: absolute;
+        left: 65%;
+    }
+    .top,
+    .bottom {
+        margin-left: 160px;
+    }
+}
