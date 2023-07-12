@@ -1,126 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="空调.css">
+  <meta charset="utf-8">
+  <title>2048</title>
 
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
+  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x920.png"  media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone, retina -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
-
 <body>
-    <div class="box">
-        <h1 class="title">
-            便携小空调
-        </h1>
-        <p class="tip">
-            Tip: 为大傻逼的夏日带去清凉！
-        </p>
-        <div class="kongtiao">
-            <div class="biao">
-                <img src="biao.png" alt="">
-            </div>
-            <div class="logo">
-                傻狗专用
-            </div>
-            <div class="line">
-            </div>
-            <div class="xianshi">
-                <p class="moshi">❄</p>
-                <h1 class="dushu">16</h1>
-                <span>℃</span>
-            </div>
-        </div>
-        <div class="feng">
-            <div class="line-l"></div>
-            <div class="line-m"></div>
-            <div class="line-r"></div>
-        </div>
-        <div class="yaokong">
-            独立遥控器
-        </div>
-        <div class="kongzhi">
-            <div class="cold">
-                ❄
-            </div>
-            <div class="on">
-                <img src="kai.png" alt="">
-            </div>
-            <div class="hot">☀</div>
-        </div>
-        <div class="top">
-            <img src="箭头 上.png" alt="">
-        </div>
-        <div class="bottom">
-            <img src="箭头.png" alt="">
-        </div>
-        <div class="foot">
-            © To my sweetheart - qiu ting ting <br> 2023-7
-        </div>
-        <audio src="di.mp3" controls class="di"></audio>
-        <audio src="https://downsc.chinaz.net/files/download/sound/huang/cd8/wav/1164.mp3" controls class="open"></audio>
-
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">2048</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
     </div>
-    <script src="jquery.min.js"></script>
-    <script>
-        var $kai = $('.on'),
-            $open = $('.open'),
-            $xianshi = $('.xianshi'),
-            $feng = $('.feng'),
-            $cold = $('.cold'),
-            $moshi = $('.moshi'),
-            $dushu = $('.dushu'),
-            $hot = $('.hot');
-        var count = 16;
-        var open1 = document.querySelector('.open');
-        var di = document.querySelector('.di');
-        $kai.on('click', function() {
-            di.play();
-        })
-        $kai.on('click', function() {
-            if ($kai.css('backgroundColor') == 'rgb(255, 0, 0)') {
-                $kai.css('backgroundColor', '#6DDB6D')
-                $xianshi.css('opacity', 0)
-                $feng.css('opacity', 0)
-                open1.pause();
-            } else {
-                open1.play();
-                $kai.css('backgroundColor', 'red')
-                $xianshi.css('opacity', 1)
-                $feng.css('opacity', 1)
-            }
-        })
-        $cold.on('click', function() {
-            di.play();
-            $moshi.text('❄');
-            $moshi.css('color', 'blue');
-        })
-        $hot.on('click', function() {
-            di.play();
-            $moshi.text('☀');
-            $moshi.css('color', '#ff9000');
-        })
-        $('.top').on('click', function() {
-            if (count > 30) {
-                alert('最大温度了');
-            } else {
-                di.play();
-                $dushu.text(count)
-                count++;
-            }
-        })
-        $('.bottom').on('click', function() {
-            if (count < 16) {
-                alert('最小温度了');
-            } else {
-                di.play();
-                $dushu.text(count)
-                count--;
-            }
-        })
-    </script>
-</body>
 
+    <div class="above-game">
+      <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+      <a class="restart-button">New Game</a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">Keep going</a>
+          <a class="retry-button">Try again</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+    <p class="game-explanation">
+      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+    </p>
+    <hr>
+    <p>
+    <strong class="important">Note:</strong> This site is the official version of 2048. You can play it on your phone via <a href="http://git.io/2048">http://git.io/2048.</a> All other apps or sites are derivatives or fakes, and should be used with caution.
+    </p>
+    <hr>
+    <p>
+    Created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
+    </p>
+  </div>
+
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+</body>
 </html>
